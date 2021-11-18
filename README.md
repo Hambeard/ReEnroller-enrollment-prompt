@@ -33,9 +33,9 @@
  
  ABOUT 
  
- Name: ReEnroller Enrollment Prompt.sh 
- Author: Andrew Needham, Jamf Professional Services Engineer 
- Version: 1.1 
+ Name: ReEnroller Enrollment Prompt.sh<br />
+ Author: Andrew Needham, Jamf Professional Services Engineer<br />
+ Version: 1.1<br />
  
  This script is designed to be run from the destination Jamf Pro server immediately after running 
  ReEnroller. The script will check for the most appropriate type of enrollment (ADE or UIE) and 
