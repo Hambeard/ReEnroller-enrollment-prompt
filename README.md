@@ -47,7 +47,8 @@
  UIE. Standard users will need help from an Admin in order to complete the process. Alternatively 
  you may elect to deploy another script which will temporarily make the logged in user an admin. 
  
- *NOTE* Uncheck "Call Automated Device Enrollment" in ReEnroller. This script will 
+ *NOTE* 
+ Uncheck "Call Automated Device Enrollment" in ReEnroller. This script will 
  call ADE if appropriate, doing so with ReEnroller as well could get a little confusing for the 
  end-user. 
  
