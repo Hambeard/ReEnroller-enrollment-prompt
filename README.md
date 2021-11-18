@@ -1,39 +1,28 @@
 # ReEnroller enrollment prompt
 
-Copyright (c) 2021 Jamf, All rights reserved. 
+Copyright (c) 2021 Jamf, All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
    * Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer. 
    * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution. 
-	* Neither the name of JAMF nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission. 
-THIS SOFTWARE IS PROVIDED BY JAMF "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL JAMF BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,  PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 
- 
-## SUPPORT FOR THIS PROGRAM
- 
- This program is distributed "as is" by the Jamf Professional Services Team. For more 
- information or support for this script, please contact your Jamf Customer Success Manager. 
- 
- 
- ABOUT 
- 
- Name: ReEnroller Enrollment Prompt.sh<br />
- Author: Andrew Needham, Jamf Professional Services Engineer<br />
- Version: 1.1<br />
- 
- This script is designed to be run from the destination Jamf Pro server immediately after running 
- ReEnroller. The script will check for the most appropriate type of enrollment (ADE or UIE) and 
- will display Jamf Helper dialogs to guide the end-user to installing the MDM profile. 
- Tested on macOS Big Sur. 
- 
- Standard/Admin users - If the logged in user is admin, this script will present ADE or UIE 
- depending on whether it detects an ADE record. If the end-user is standard it will only present 
- UIE. Standard users will need help from an Admin in order to complete the process. Alternatively 
- you may elect to deploy another script which will temporarily make the logged in user an admin. 
- 
- *NOTE* 
- Uncheck "Call Automated Device Enrollment" in ReEnroller. This script will 
- call ADE if appropriate, doing so with ReEnroller as well could get a little confusing for the 
- end-user. 
+	* Neither the name of JAMF nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.<br />
+
+THIS SOFTWARE IS PROVIDED BY JAMF "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL JAMF BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,  PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+### ABOUT
+
+Name: ReEnroller Enrollment Prompt.sh<br />
+Author: Andrew Needham, Jamf Professional Services Engineer<br />
+Version: 1.1<br />
+
+https://github.com/jamf/ReEnroller
+
+This script is designed to be run from the destination Jamf Pro server immediately after running ReEnroller. The script will check for the most appropriate type of enrollment (ADE or UIE) and will display Jamf Helper dialogs to guide the end-user to installing the MDM profile.<br />
+
+Standard/Admin users - If the logged in user is admin, this script will present ADE or UIE depending on whether it detects an ADE record. If the end-user is standard it will only present UIE. Standard users will need help from an Admin in order to complete the process. Alternatively you may elect to deploy another script which will temporarily make the logged in user an admin. <br />
+
+*NOTE*
+Uncheck "Call Automated Device Enrollment" in ReEnroller. This script will call ADE if appropriate, doing so with ReEnroller as well could get a little confusing for the end-user.
  
  Instructions 
  * Upload ReEnroller Enrollment Prompt script to destination Jamf Pro server 
