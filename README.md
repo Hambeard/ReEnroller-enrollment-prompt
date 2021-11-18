@@ -15,39 +15,37 @@ Name: ReEnroller Enrollment Prompt.sh<br />
 Author: Andrew Needham, Jamf Professional Services Engineer<br />
 Version: 1.1<br />
 
-https://github.com/jamf/ReEnroller
+Designed to be run after https://github.com/jamf/ReEnroller
 
 This script is designed to be run from the destination Jamf Pro server immediately after running ReEnroller. The script will check for the most appropriate type of enrollment (ADE or UIE) and will display Jamf Helper dialogs to guide the end-user to installing the MDM profile.<br />
 
-Standard/Admin users - If the logged in user is admin, this script will present ADE or UIE depending on whether it detects an ADE record. If the end-user is standard it will only present UIE. Standard users will need help from an Admin in order to complete the process. Alternatively you may elect to deploy another script which will temporarily make the logged in user an admin. <br />
+Standard/Admin users - If the logged in user is admin, this script will present ADE or UIE depending on whether it detects an ADE record. If the end-user is standard it will only present UIE. Standard users will need help from an Admin in order to complete the process. Alternatively you may elect to deploy another script which will temporarily make the logged in user an admin.<br />
 
-*NOTE*
 Uncheck "Call Automated Device Enrollment" in ReEnroller. This script will call ADE if appropriate, doing so with ReEnroller as well could get a little confusing for the end-user.
- 
- Instructions 
- * Upload ReEnroller Enrollment Prompt script to destination Jamf Pro server 
- * Fill out parameter labels 
- 	- Parameter 4 - Title 
- 	- Parameter 5 - Message line 1 
- 	- Parameter 6 - Message line 2 
- 	- Parameter 7 - Custom icon path 
- 	- Parameter 8 - Jamf Pro invitation code (optional) 
-	- Parameter 9 - Custom trigger to run at end of successful re-enrollment 
- * Create a Smart Computer Group 
-   - Name: macOS Big Sur or newer with Supervision status = No 
-   - Criteria: Supervised 
-   - Operator: is 
-   - Value: No 
-   - Criteria: Operating System Version 
-   - Operator: greater than or equal 
-   - Value: 11 
- * Create a Policy 
-   - Name: ReEnroller Enrollment Prompt 
-   - Trigger: Recurring Check-in 
-   - Execution Frequency: Ongoing (or less frequently if desired) 
-   - Payload: Script 
-	  Fill out the parameter fields with a title, message, icon and invitation code if desired, 
- 	  default values will be used if you do not provide your own. 
+
+Instructions
+* Upload ReEnroller Enrollment Prompt script to destination Jamf Pro server 
+* Fill out parameter labels
+	- Parameter 4 - Title
+	- Parameter 5 - Message line 1
+	- Parameter 6 - Message line 2
+	- Parameter 7 - Custom icon path
+	- Parameter 8 - Jamf Pro invitation code (optional)
+	- Parameter 9 - Custom trigger to run at end of successful re-enrollment
+* Create a Smart Computer Group
+	- Name: macOS Big Sur or newer with Supervision status = No
+	- Criteria: Supervised
+	- Operator: is
+	- Value: No
+	- Criteria: Operating System Version
+	- Operator: greater than or equal
+	- Value: 11
+ * Create a Policy
+   - Name: ReEnroller Enrollment Prompt
+   - Trigger: Recurring Check-in
+   - Execution Frequency: Ongoing (or less frequently if desired)
+   - Payload: Script<br/>
+	  Fill out the parameter fields with a title, message, icon and invitation code if desired, default values will be used if you do not provide your own. 
    - Scope: macOS Big Sur or newer with Supervision status = No (Smart Computer Group) 
    - Payload: Maintenance 
 	  Ensure that Update Inventory is checked 
