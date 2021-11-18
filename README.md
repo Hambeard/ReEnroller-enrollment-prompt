@@ -45,27 +45,19 @@ Instructions
    - Trigger: Recurring Check-in
    - Execution Frequency: Ongoing (or less frequently if desired)
    - Payload: Script<br/>
-	  Fill out the parameter fields with a title, message, icon and invitation code if desired, default values will be used if you do not provide your own. 
-   - Scope: macOS Big Sur or newer with Supervision status = No (Smart Computer Group) 
-   - Payload: Maintenance 
-	  Ensure that Update Inventory is checked 
+	*Fill out the parameter fields with a title, message, icon and invitation code if desired, default values will be used if you do not provide any.*
+   - Scope: macOS Big Sur or newer with Supervision status = No (Smart Computer Group)
+   - Payload: Maintenance
+	*Ensure that Update Inventory is checked*
  * Make a note of the policy ID, this should be specified as the "Run policy after verifying 
 	migration" Policy ID when building your ReEnroller package. 
  
- Invitation code - If a Jamf Pro invitation code is provided, end-users will not be required to 
- log in to the Jamf Pro User-Initiated Enrollment page to download the new MDM profile. Leave this 
- parameter blank if you wish to prompt for authentication at this step. You can generate invitation 
- codes through the enrollment invitations menu. 
+Invitation code - If a Jamf Pro invitation code is provided, end-users will not be required to log in to the Jamf Pro User-Initiated Enrollment page to download the new MDM profile. Leave this parameter blank if you wish to prompt for authentication at this step. You can generate invitation codes through the enrollment invitations menu. 
  
- Upon successful re-enrollment this script will touch a "flag file" to 
- /Library/Application Support/JAMF/Receipts/com.jamfps.migrateSuccess.pkg 
- If you wish to monitor for computers which have completed this process, you can create a Smart 
- Computer Group to identify computers these computers with the "Packages Installed By Casper" 
- criteria. 
+ Upon successful re-enrollment this script will touch a "flag file" to /Library/Application Support/JAMF/Receipts/com.jamfps.migrateSuccess.pkg If you wish to monitor for computers which have completed this process, you can create a Smart Computer Group to identify computers these computers with the "Packages Installed By Casper" criteria. 
  
- Timeouts - Jamf Helper windows will timeout after the following periods of time. When the window 
- times out, it assumes the default button has been pressed. 
- "Enroll" window - 10 minutes 
- "Instructions" windows - 5 minutes 
- "Thanks" window - 1 minute 
+ Timeouts - Jamf Helper windows will timeout after the following periods of time. When the window times out, it assumes the default button has been pressed.
+* "Enroll" window - 10 minutes 
+* "Instructions" windows - 5 minutes 
+* "Thanks" window - 1 minute 
 
